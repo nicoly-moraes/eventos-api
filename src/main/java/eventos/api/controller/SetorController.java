@@ -17,8 +17,8 @@ public class SetorController {
     private SetorService service;
 
     @GetMapping
-    public List<DadosListarSetor> listar() {
-        return service.listar();
+    public List<DadosListarSetor> listar(@RequestParam(name = "evento_id", defaultValue = "0") Long event_id) {
+        return service.listar(event_id);
     }
 
     @GetMapping("/{id}")

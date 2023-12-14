@@ -17,8 +17,8 @@ public class IngressoController {
     private IngressoService service;
 
     @GetMapping
-    public List<DadosListarIngresso> listar() {
-        return service.listar();
+    public List<DadosListarIngresso> listar(@RequestParam(name = "setor_id", defaultValue = "0") Long setor_id) {
+        return service.listar(setor_id);
     }
 
     @GetMapping("/{id}")

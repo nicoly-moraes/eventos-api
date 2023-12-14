@@ -11,5 +11,5 @@ public record DadosCadastrarIngresso(
         @NotNull
         Double valor,
         @NotNull
-        int qtdLimite) {
+        int qtd_limite) {
 }

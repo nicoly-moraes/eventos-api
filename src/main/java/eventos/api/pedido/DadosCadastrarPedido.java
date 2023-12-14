@@ -5,13 +5,10 @@ import jakarta.validation.constraints.NotNull;
 
 public record DadosCadastrarPedido(
         @NotNull
-        Long usuario_id,
+        Long cpf_usuario,
+
         @NotNull
-        Long ingresso_id,
-        @NotBlank
-        String data,
+        String nome_usuario,
         @NotNull
-        int status,
-        @NotNull
-        int tipoPagamento) {
+        Long ingresso_id) {
 }

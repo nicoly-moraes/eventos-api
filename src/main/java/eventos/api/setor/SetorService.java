@@ -11,7 +11,14 @@ public class SetorService {
     @Autowired
     private SetorRepository setorRepository;
 
-    public List<DadosListarSetor> listar() {
+    public List<DadosListarSetor> listar(Long evento_id) {
+        if (evento_id != 0) {
+            return setorRepository.findAllByEventoId(evento_id)
+                .stream()
+                .map(DadosListarSetor::new)
+                .toList();
+        }
+
         return setorRepository
                 .findAll()
                 .stream()

@@ -16,12 +16,10 @@ import java.util.Optional;
 public class EventoController {
     @Autowired
     private EventoService service;
-
     @GetMapping
     public List<DadosListarEvento> listar() {
         return service.listar();
     }
-
     @GetMapping("/{id}")
     public Optional<Evento> listarId(@PathVariable Long id) {
         return service.listarId(id);

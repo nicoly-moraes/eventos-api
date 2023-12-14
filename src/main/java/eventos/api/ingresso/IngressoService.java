@@ -10,8 +10,15 @@ public class IngressoService {
     @Autowired
     private IngressoRepository ingressoRepository;
 
-    public List<DadosListarIngresso> listar() {
-        return ingressoRepository.findAll()
+    public List<DadosListarIngresso> listar(Long setor_id) {
+        if (setor_id != 0) {
+            return ingressoRepository.findAllBySetorId(setor_id)
+                    .stream()
+                    .map(DadosListarIngresso::new)
+                    .toList();
+        }
+        return ingressoRepository
+                .findAll()
                 .stream()
                 .map(DadosListarIngresso::new)
                 .toList();

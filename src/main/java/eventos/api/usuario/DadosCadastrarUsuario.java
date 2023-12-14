@@ -7,10 +7,6 @@ public record DadosCadastrarUsuario(
         @NotBlank
         String nome,
         @NotNull
-        Long cpf,
-        @NotBlank
-        String email,
-        @NotBlank
-        String senha
+        Long cpf
 ) {
 }

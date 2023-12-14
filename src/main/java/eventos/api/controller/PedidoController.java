@@ -1,9 +1,6 @@
 package eventos.api.controller;
 
-import eventos.api.pedido.DadosCadastrarPedido;
-import eventos.api.pedido.DadosListarPedido;
-import eventos.api.pedido.Pedido;
-import eventos.api.pedido.PedidoService;
+import eventos.api.pedido.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +15,7 @@ public class PedidoController {
     private PedidoService service;
 
     @GetMapping
-    public List<DadosListarPedido> listar() {
+    public List<DadosListarPedidos> listar() {
         return service.listar();
     }
 

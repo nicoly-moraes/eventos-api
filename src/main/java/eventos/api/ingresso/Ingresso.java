@@ -17,13 +17,13 @@ public class Ingresso {
     private long id;
     private String nome;
     private Double valor;
-    private int qtdLimite;
+    private int qtd_limite;
     private Long setor_id;
 
     public Ingresso(DadosCadastrarIngresso dados) {
         this.nome = dados.nome();
         this.valor = dados.valor();
-        this.qtdLimite = dados.qtdLimite();
+        this.qtd_limite = dados.qtd_limite();
         this.setor_id = dados.setor_id();
     }
 
@@ -34,8 +34,8 @@ public class Ingresso {
         if(dados.valor() != null) {
             this.valor = dados.valor();
         }
-        if(dados.qtdLimite() != 0) {
-            this.qtdLimite = dados.qtdLimite();
+        if(dados.qtd_limite() != 0) {
+            this.qtd_limite = dados.qtd_limite();
         }
     }
 }
